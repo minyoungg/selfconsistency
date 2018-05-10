@@ -1,5 +1,5 @@
 ## Fighting Fake News: Image Splice Detection via Learned Self-Consistency
-### [[paper]]() [[website]]()
+### [[paper]](https://github.com/minyoungg/deepForensics) [[website]](https://andrewhliu.github.io/forensics/)
 
 [Minyoung Huh<sup>12</sup>](https://minyounghuh.com), [Andrew Liu<sup>1</sup>](http://eschew.github.io/), [Andrew Owens<sup>1</sup>](http://andrewowens.com/), [Alexei A. Efros<sup>1</sup>](https://people.eecs.berkeley.edu/~efros/)  
 UC Berkeley, Berkeley AI Research<sup>1</sup>  
@@ -30,13 +30,10 @@ If you find our work useful, please cite:
     title = {Fighting Fake News: Image Splice Detection via Learned Self-Consistency}
     author = {Huh, Minyoung and Liu, Andrew and
               Owens, Andrew and Efros, Alexei A.},
-    journal = {arXiv preprint arXiv:#ADDNUMBER},
+    journal = {arXiv preprint arXiv:COMINGSOON},
     year = {2018}
 }
 ```
 
 ## Questions  
 For any further questions please contact Minyoung Huh or Andrew Liu
-
-
-# deepForensics
