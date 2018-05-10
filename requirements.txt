@@ -1,0 +1,8 @@
+numpy==1.14.0
+opencv_python==3.4.0.12
+tensorflow_gpu>=1.2.0
+scikit-image==0.13.1
+scipy==1.0.0
+matplotlib==2.1.2
+scikit_learn==0.19.1
+Pillow==5.0.0

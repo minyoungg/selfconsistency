@@ -1,0 +1,16 @@
+*.pyc
+*.npy
+*.jpg
+*.png
+*.ckpt
+*.ckpt.meta
+*.ckpt.index
+*.npy
+*swp*
+/tmp
+./ipynb_checkpoints
+*/.ipynb_checkpoints
+/tb
+/ckpt
+/output
+/results
