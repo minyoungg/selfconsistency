@@ -1,0 +1,326 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!-- 
+  <script src="./resources/jsapi" type="text/javascript"></script>
+  <script type="text/javascript" async>google.load("jquery", "1.3.2");</script>
+ -->
+<style type="text/css">
+  body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 0px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+
+
+  
+    <title>Fighting Fake News</title>
+    <!-- 
+    <meta property="og:image" content="https://richzhang.github.io/PerceptualSimilarity/index_files/fig1_website_v2.jpg">
+    <meta property="og:title" content="The Unreasonable Effectiveness of Deep Networks as a Perceptual Metric. In CVPR, 2018."> -->
+  </head>
+
+  <body>
+        <br>
+          <center>
+            <span style="font-size:34px">Fighting Fake News: Image Splice Detection via Learned Self-Consistency</span><br><br>
+          <table align="center" width="700px">
+            <tbody><tr>
+                    <td align="center" width="175px">
+              <center>
+                <span style="font-size:22px"><a href="http://minyounghuh.com">Minyoung Huh</a><sup>12</sup></span>
+                </center>
+                </td>
+                    <td align="center" width="175px">
+              <center>
+                <span style="font-size:22px"><a href="http://eschew.github.io">Andrew Liu</a><sup>1</sup></span>
+                </center>
+                </td>
+                    <td align="center" width="175px">
+              <center>
+                <span style="font-size:22px"><a href="http://andrewowens.com">Andrew Owens</a><sup>1</sup></span>
+                </center>
+                </td>
+                    <td align="center" width="175px">
+              <center>
+                <span style="font-size:22px"><a href="http://www.eecs.berkeley.edu/~efros/">Alexei A. Efros</a><sup>1</sup></span>
+                </center>
+                </td>
+            </tr>
+        </tbody></table>
+        
+          <table align="center" width="700px">
+            <tbody><tr>
+                    <td align="center" width="100px">
+              <center>
+                    <span style="font-size:22px"></span>
+                </center>
+                </td>
+                    <td align="center" width="200px">
+              <center>
+                    <span style="font-size:22px"><sup>1</sup>UC Berkeley</span>
+                </center>
+                </td>
+                    <td align="center" width="300px">
+              <center>
+                    <span style="font-size:22px"><sup>2</sup>Carnegie Mellon University</span>
+                </center>
+                </td>
+                    <td align="center" width="100px">
+              <center>
+                    <span style="font-size:22px"></span>
+                </center>
+                </td>
+        </tr></tbody></table>
+        <br>
+          <table align="center" width="1100px">
+            <tbody><tr>
+                    <td align="center" width="275px">
+              <center>
+                    <span style="font-size:18px"></span>
+                </center>
+                </td>
+                    <td align="center" width="225px">
+              <center>
+                <span style="font-size:22px">Code <a href="https://github.com/minyoungg/forensics"> [GitHub]</a></span>
+                </center>
+                </td>
+                    <td align="center" width="225px">
+              <center>
+                <span style="font-size:22px"><a href="exif_consistency.pdf">Paper (60.1 MB)</a></span>
+                </center>
+                </td>
+                    <td align="center" width="275px">
+              <center>
+                    <span style="font-size:18px"></span>
+                </center>
+                </td>
+        </tr></tbody></table>
+          </center>
+
+        <table align="center" width="1100px">
+          <tbody><tr>
+                  <td width="400px">
+            <center>
+                      <img class="rounded" src="./images/teaser.png" width="1100px">
+                      <br>
+          </center>
+                  </td>
+                  </tr>
+                  </tbody></table>
+
+        <br>
+      <hr>
+
+        <center><h1>Abstract</h1></center>
+        Advances in photo editing and manipulation tools have made it significantly easier to create fake imagery, highlighting the need for better visual forensics algorithms. However, learning to detect manipulations from labelled training data is difficult due to the lack of good datasets for manipulated visual content. In this paper, we introduce a self-supervised method for learning to detect visual manipulations using only unlabeled data. Given a large collection of real photographs with automatically recorded EXIF meta-data, we train a model to determine whether an image is self-consistent -- that is, whether its content could have been produced by a single imaging pipeline. We apply this self-supervised learning method to the task of localizing spliced image content. Our forensics model achieves state of the art results on many benchmarks, despite being trained without examples of actual manipulations, and without modeling specific detection cues. Beyond handcrafted benchmarks, we also show promising results spotting fakes on <i>Reddit</i> and <i>The Onion</i>, as well as detecting computer-generated splices. <br>
+        
+          <br><hr><center><h1>Exif Consistency Training</h1></center><table align="center" width="900px">
+          
+          <tbody><tr>
+                <!-- <td align=center width=600px> --><!-- </td> -->
+        </tr>
+
+        </tbody></table><table align="center" width="900px">
+          <tbody><tr>
+                    <td align="center" width="900px">
+            <center>
+              </center></td><td><a href="https://github.com/mingyoungg/forensics">
+              <img class="round" style="width:900px" src="./images/diagram.jpg"></a>
+            </td>
+        </tr>
+      </tbody></table>
+
+      <br>
+
+        <center>
+        <span style="font-size:28px"><a href="https://github.com/mingyoungg/forensics">[GitHub]</a></span>
+      <br>
+          <br><hr><center><h1>In-the-Wild Image Splice Dataset</h1></center><table align="center" width="900px">
+          
+          <tbody><tr>
+                <!-- <td align=center width=600px> --><!-- </td> -->
+        </tr>
+
+        </tbody></table><table align="center" width="800px">
+          <tbody><tr>
+                    <td align="center" width="800px">
+            <center>
+              </center></td><td><a href="https://github.com/mingyoungg/forensics">
+              <img class="round" style="width:800px" src="./images/mask_sample.jpg"></a>
+            </td>
+        </tr>
+      </tbody></table>
+
+      <br>
+        <center>
+        <span style="font-size:28px"><a href="in_wild/in_wild.tar.gz">[Download (89.2 MB)]</a>
+        <br>
+        </span></center><table align="center" width="800px">
+        <tbody><tr></tr>
+      </tbody></table>
+      <br>
+
+      <hr>
+        <center><h1>Paper</h1></center><table align="center" width="500" px="">
+      
+          <tbody><tr>
+          <td><a href="exif_consistency.pdf"><img class="layered-paper-big" style="height:175px" src="./images/page1.png"></a></td>
+          <td><span style="font-size:12pt">M. Huh, A. Liu, A. Owens, A. A. Efros,</span><br>
+          <b><span style="font-size:12pt">Fighting Fake News: Image Splice<br>Detection via Learned Self-Consistency</span></b><br>
+          <span style="font-size:12pt">In NowhereYet, 2018 (<a href="exif_consistency.pdf">Arxiv</a>).</span>
+          </td>
+                  
+              </tr>
+        </tbody></table>
+      <br>
+
+      <table align="center" width="600px">
+        <tbody><tr>
+          <td><span style="font-size:24pt"><center>
+            <a href="./cite.txt" target="_blank">[Bibtex]</a>
+                  </center></span></td>
+              </tr>
+        </tbody></table>
+        <br>
+      <hr>
+
+        <center><h1>Extra</h1></center><table align="center" width="600" px="">
+          <tbody><tr>
+          <td><h2>Results</h2></td>
+          <td width="100"></td>
+          <td>
+            <a href="results/"><img style="width:500px" src="./images/results_teaser.png"></a>
+          </td>
+                  
+            </tr>
+
+          <tr>
+          <td><h2>EXIF Rankings</h2></td>
+          <td width="100"></td>
+          <td>
+            <a href="exif_table.html"><img style="width:500px" src="./images/rankings.png"></a>
+          </td>
+                  
+              </tr>
+        </tbody></table>
+        <br>
+      <hr>
+
+
+        <table align="center" width="1100px">
+          <tbody><tr>
+                  <td width="400px">
+            <left>
+          <center><h1>Acknowledgements</h1></center>
+          We thank Hany Farid and Shruti Agarwal for their advice, assistance, and inspiration in building this project, David Fouhey and Allan Jabri for helping edit our paper, and Abhinav Gupta for allowing us to use some computing resources. We additionally thank David for lending us his <a href="images/qe2.jpg" target="_blank">Photoshop</a> skills. We finally thank the many <i>Reddit</i> and <i>Onion</i> artists who unknowingly contributed to our dataset.
+          <br>
+          <br>
+          This website template is being rented from <a href="https://richzhang.github.io/colorization/">our colorful landlords</a>.
+      </left>
+    </td>
+       </tr>
+    </tbody></table>
+
+    <br><br>
+
+</body></html>
