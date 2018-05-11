@@ -1,5 +1,7 @@
-@inproceedings{huh2018forensics,
-  title={Fighting Fake News: Image Splice Detection via Learned Self-Consistency},
-  author={Huh, Minyoung and Liu, H. Andrew and Owens, Andrew and Efros, Alexei A},
-  year={2018}
+@article{huh18forensics,
+    title = {Fighting Fake News: Image Splice Detection via Learned Self-Consistency}
+    author = {Huh, Minyoung and Liu, Andrew and
+              Owens, Andrew and Efros, Alexei A.},
+    journal = {arXiv preprint arXiv:1805.04096},
+    year = {2018}
 }
