@@ -214,7 +214,7 @@
       <hr>
 
         <center><h1>Abstract</h1></center>
-        Advances in photo editing and manipulation tools have made it significantly easier to create fake imagery, highlighting the need for better visual forensics algorithms. However, learning to detect manipulations from labelled training data is difficult due to the lack of good datasets for manipulated visual content. In this paper, we introduce a self-supervised method for learning to detect visual manipulations using only unlabeled data. Given a large collection of real photographs with automatically recorded EXIF meta-data, we train a model to determine whether an image is self-consistent -- that is, whether its content could have been produced by a single imaging pipeline. We apply this self-supervised learning method to the task of localizing spliced image content. Our forensics model achieves state of the art results on many benchmarks, despite being trained without examples of actual manipulations, and without modeling specific detection cues. Beyond handcrafted benchmarks, we also show promising results spotting fakes on <i>Reddit</i> and <i>The Onion</i>, as well as detecting computer-generated splices. <br>
+        Advances in photo editing and manipulation tools have made it sig- nificantly easier to create fake imagery. Learning to detect such manipulations, however, remains a challenging problem due to the lack of sufficient training data. In this paper, we propose a model that learns to detect visual manipulations from unlabeled data through self-supervision. Given a large collection of real photographs with automatically recorded EXIF metadata, we train a model to de- termine whether an image is self-consistent — that is, whether its content could have been produced by a single imaging pipeline. We apply this self-supervised learning method to the task of detecting and localizing image splices. Although the proposed model obtains state-of-the-art performance on several benchmarks, we see it as merely a step in the long quest for a truly general-purpose visual forensics tool.<br>
 
           <br><hr><center><h1>Exif Consistency Training</h1></center><table align="center" width="900px">
 
@@ -295,7 +295,7 @@
           We thank Hany Farid and Shruti Agarwal for their advice, assistance, and inspiration in building this project, David Fouhey and Allan Jabri for helping edit our paper, and Abhinav Gupta for allowing us to use some computing resources. We additionally thank David for lending us his <a href="images/qe2.jpg" target="_blank">Photoshop</a> skills. We finally thank the many <i>Reddit</i> and <i>Onion</i> artists who unknowingly contributed to our dataset.
           <br>
           <br>
-          This work was supported, in part, by DARPA grant FA8750-16-C-0166 and UC Berke- ley Center for Long-Term Cybersecurity. 
+          This work was supported, in part, by DARPA grant FA8750-16-C-0166 and UC Berkeley Center for Long-Term Cybersecurity. 
           <br>
           <br>
           This website template is being rented from <a href="https://richzhang.github.io/colorization/">our colorful landlords</a>.
