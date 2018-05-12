@@ -9,6 +9,9 @@ In this paper, we introduce a self-supervised method for
 learning to detect visual manipulations using only unlabeled data. Given a large collection of real photographs with automatically recorded EXIF meta-data, we train a model to determine whether an image is self-consistent -- that is, whether its content could have been produced by a single imaging pipeline.
     
 ### 1) Prerequisites
+First clone this repo  
+```git clone --single-branch https://github.com/minyoungg/selfconsistency```
+
 All prerequisites should be listed in requirements.txt. The code is written on TensorFlow and is run on Python2.7, we have not verified whether Python3 works. The following command should automatically load any necessary requirements:
 ```bash pip install -r requirements.txt```
 
