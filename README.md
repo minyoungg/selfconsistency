@@ -23,6 +23,9 @@ To download our pretrained-model run the following script in the terminal:
 To run our model on an image run the following code:   
 ``` python demo.py --im_path=./images/demo.png```
 
+We also provide a normalized cut implementation by running the code:
+``` python ncuts_demo.py --im_path=./images/ncuts_demo.png```
+
 We have setup a ipython notebook demo [here](demo.ipynb)   
 Disclaimer: Our model works the best on high-resolution natural images. Frames from a videos do not generally work well.
 
