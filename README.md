@@ -32,11 +32,11 @@ Disclaimer: Our model works the best on high-resolution natural images. Frames f
 ### Citation
 If you find our work useful, please cite:   
 ```
-@article{huh18forensics,
+@inproceedings{huh18forensics,
     title = {Fighting Fake News: Image Splice Detection via Learned Self-Consistency}
     author = {Huh, Minyoung and Liu, Andrew and
               Owens, Andrew and Efros, Alexei A.},
-    journal = {arXiv preprint arXiv:1805.04096},
+    booktitle = {ECCV},
     year = {2018}
 }
 ```
