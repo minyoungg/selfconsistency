@@ -1,7 +1,7 @@
-@article{huh18forensics,
+@inproceedings{huh18forensics,
     title = {Fighting Fake News: Image Splice Detection via Learned Self-Consistency}
     author = {Huh, Minyoung and Liu, Andrew and
               Owens, Andrew and Efros, Alexei A.},
-    booktitle={ECCV}
+    booktitle={ECCV},
     year = {2018}
 }
