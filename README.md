@@ -28,7 +28,7 @@ We also provide a normalized cut implementation by running the code:
 ``` python ncuts_demo.py --im_path=./images/ncuts_demo.png```
 
 We have setup a ipython notebook demo [here](demo.ipynb)   
-Disclaimer: Our model works the best on high-resolution natural images. Frames from a videos do not generally work well.
+Disclaimer: Our model works the best on high-resolution natural images. Frames from videos do not generally work well.
 
 ### Citation
 If you find our work useful, please cite:   
