@@ -18,6 +18,9 @@
   h1 {
     font-weight:300;
   }
+  h2 {
+    font-weight:300;
+  }
 
   .disclaimerbox {
     background-color: #eee;
@@ -116,34 +119,34 @@
 
     <title>Fighting Fake News</title>
     <meta property="og:image" content="https://minyoungg.github.io/selfconsistency/images/teaser.png">
-    <meta property="og:title" content="Fighting Fake News: Image Splice Detection via Learned Self-Consistency."> 
+    <meta property="og:title" content="Fighting Fake News: Image Splice Detection via Learned Self-Consistency.">
     <meta property='og:video' content='https://www.youtube.com/v/lmOejdhSio0'/>
   </head>
 
   <body>
         <br>
           <center>
-            <span style="font-size:34px">Fighting Fake News: Image Splice Detection via Learned Self-Consistency</span><br><br><br>
+            <span style="font-size:34px">Fighting Fake News: Image Splice Detection via Learned Self-Consistency</span><br><br>
           <table align="center" width="730px">
             <tbody><tr>
                     <td align="center" width="205px">
               <center>
-                <span style="font-size:22px"><a href="http://minyounghuh.com">Minyoung Huh</a>*<sup>1, 2</sup></span>
+                <span style="font-size:20px"><a href="http://minyounghuh.com">Minyoung Huh</a>*<sup>12</sup></span>
                 </center>
                 </td>
                     <td align="center" width="175px">
               <center>
-                <span style="font-size:22px"><a href="http://andrewhliu.github.io">Andrew Liu</a>*<sup>1</sup></span>
+                <span style="font-size:20px"><a href="http://andrewhliu.github.io">Andrew Liu</a>*<sup>1</sup></span>
                 </center>
                 </td>
                     <td align="center" width="175px">
               <center>
-                <span style="font-size:22px"><a href="http://andrewowens.com">Andrew Owens</a><sup>1</sup></span>
+                <span style="font-size:20px"><a href="http://andrewowens.com">Andrew Owens</a><sup>1</sup></span>
                 </center>
                 </td>
                     <td align="center" width="175px">
               <center>
-                <span style="font-size:22px"><a href="http://www.eecs.berkeley.edu/~efros/">Alexei A. Efros</a><sup>1</sup></span>
+                <span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~efros/">Alexei A. Efros</a><sup>1</sup></span>
                 </center>
                 </td>
             </tr>
@@ -153,46 +156,45 @@
             <tbody><tr>
                     <td align="center" width="100px">
               <center>
-                    <span style="font-size:22px"></span>
+                    <span style="font-size:20px"></span>
+                </center>
+                </td>
+                    <td align="center" width="250px">
+              <center>
+                    <span style="font-size:20px"><sup>1</sup>UC Berkeley</span>
+                </center>
+                </td>
+                    <td align="center" width="250px">
+              <center>
+                    <span style="font-size:20px"><sup>2</sup>Carnegie Mellon University</span>
+                </center>
+                </td>
+                    <td align="center" width="100px">
+              <center>
+                    <span style="font-size:20px"></span>
+                </center>
+                </td>
+        </tr></tbody></table>
+          <table align="center" width="700px">
+            <tbody><tr>
+                    <td align="center" width="150px">
+              <center>
+                    <span style="font-size:18px"></span>
                 </center>
                 </td>
                     <td align="center" width="200px">
               <center>
                 <br>
-                    <span style="font-size:22px"><sup>1</sup>UC Berkeley</span>
+                <span style="font-size:20px">Code <a href="https://github.com/minyoungg/selfconsistency"> [GitHub]</a></span>
                 </center>
                 </td>
-                    <td align="center" width="300px">
+                    <td align="center" width="200px">
               <center>
                 <br>
-                    <span style="font-size:22px"><sup>2</sup>Carnegie Mellon University</span>
+                <span style="font-size:20px">ECCV 2018 <a href="https://arxiv.org/pdf/1805.04096.pdf"> [Paper]</a></span>
                 </center>
                 </td>
-                    <td align="center" width="100px">
-              <center>
-                    <span style="font-size:22px"></span>
-                </center>
-                </td>
-        </tr></tbody></table>
-        <br>
-          <table align="center" width="1100px">
-            <tbody><tr>
-                    <td align="center" width="275px">
-              <center>
-                    <span style="font-size:18px"></span>
-                </center>
-                </td>
-                    <td align="center" width="225px">
-              <center>
-                <span style="font-size:22px">Code <a href="https://github.com/minyoungg/selfconsistency"> [GitHub]</a></span>
-                </center>
-                </td>
-                    <td align="center" width="225px">
-              <center>
-                <span style="font-size:22px"><a href="https://arxiv.org/pdf/1805.04096.pdf">Paper (8.3 MB)</a></span>
-                </center>
-                </td>
-                    <td align="center" width="275px">
+                    <td align="center" width="150px">
               <center>
                     <span style="font-size:18px"></span>
                 </center>
@@ -214,16 +216,16 @@
         <br>
       <hr>
 
-        <center><h1>Abstract</h1></center>
+        <center><h2>Abstract</h2></center>
         Advances in photo editing and manipulation tools have made it significantly easier to create fake imagery. Learning to detect such manipulations, however, remains a challenging problem due to the lack of sufficient amounts of manipulated training data. In this paper, we propose a learning algorithm for detecting visual image manipulations that is trained only using a large dataset of real photographs.  The algorithm uses the automatically recorded photo EXIF metadata as supervisory signal for training a model to determine whether an image is <i>self-consistent</i> &mdash; that is, whether its content could have been produced by a single imaging pipeline. We apply this self-consistency model to the task of detecting and localizing image splices. The proposed method obtains state-of-the-art performance on several image forensics benchmarks, despite never seeing any manipulated images at training.  That said, it is merely a step in the long quest for a truly general purpose visual forensics tool.<br>
 
-        <hr><center><h1>Video</h1></center>
+        <hr><center><h2>Video</h2></center>
         <p align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lmOejdhSio0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe></p>
           <center>
             <span style="font-size:20px"><a href="https://drive.google.com/file/d/1V68kRDaHRfz3iB9EqGV727MKAWZ6B30g/view?usp=sharing">[Slides (164 MB)]</a><span style="display:inline-block; width: 100px;"></span><a href="./presentation.pdf">[PDF Slides (7 MB)]</a></span></span>
           </center>
-          <br><hr><center><h1>EXIF Consistency Training</h1></center><table align="center" width="900px">
+          <br><hr><center><h2>EXIF Consistency Training</h2></center><table align="center" width="900px">
 
           <tbody><tr>
                 <!-- <td align=center width=600px> --><!-- </td> -->
@@ -242,9 +244,9 @@
       <br>
 
         <center>
-        <span style="font-size:28px"><a href="https://github.com/minyoungg/selfconsistency">[GitHub]</a>
+        <span style="font-size:22px">Try our code! <a href="https://github.com/minyoungg/selfconsistency">[GitHub]</a></span>
       <br>
-          <br><hr><center><h1>In-the-Wild Image Splice Dataset</h1></center><table align="center" width="900px">
+          <br><hr><center><h2>In-the-Wild Image Splice Dataset</h2></center><table align="center" width="900px">
 
           <tbody><tr>
                 <!-- <td align=center width=600px> --><!-- </td> -->
@@ -262,7 +264,7 @@
 
       <br>
         <center>
-        <span style="font-size:28px"><a href="in_wild/in_wild.tar.gz">[Download (89.2 MB)]</a>
+        <span style="font-size:22px"><a href="in_wild/in_wild.tar.gz">[Download (89.2 MB)]</a>
         <br>
         </span></center><table align="center" width="800px">
         <tbody><tr></tr>
@@ -270,7 +272,7 @@
       <br>
 
       <hr>
-        <center><h1>Paper</h1></center><table align="center" width="500" px="">
+        <center><h2>Paper</h2></center><table align="center" width="500" px="">
 
           <tbody><tr>
           <td><a href="https://arxiv.org/pdf/1805.04096.pdf"><img class="layered-paper-big" style="height:175px" src="./images/page1.png"></a></td>
@@ -279,17 +281,46 @@
           <span style="font-size:12pt">In ECCV, 2018 (<a href="https://arxiv.org/pdf/1805.04096.pdf">arXiv</a>).</span>
           </td>
 
+          <br>
+          <table align="center" width="600px">
+            <tbody>
+              <tr>
+                <td>
+                  <center>
+                    <span style="font-size:22px">
+                      <a href="./cite.txt" target="_blank">[Bibtex]</a>
+                    </span>
+                  </center>
+                </td>
               </tr>
-        </tbody></table>
+            </tbody>
+          </table>
       <br>
 
-      <table align="center" width="600px">
-        <tbody><tr>
-          <td><span style="font-size:24pt"><center>
-            <a href="./cite.txt" target="_blank">[Bibtex]</a>
-                  </center></span></td>
-              </tr>
-        </tbody></table>
+      <br><hr>
+      <center><h2>Popular Press</h2></center><table align="center" width="500" px="">
+
+        <table align="center" width="500px">
+          <tbody><tr>
+              <td align="center" width="200px">
+                <center>
+                  <a href="https://www.newscientist.com/article/2169342-new-algorithm-can-help-spot-faked-photos-before-they-go-viral/">
+                      <img class="round" style="width:200px" src="./images/newscientist_logo.svg"></a>
+                  </a>
+                </center>
+              </td>
+              <td align="center" width="100px">
+              </td>
+              <td align="center" width="200px">
+                <center>
+                  <a href="https://www.nobbot.com/general/imagen-manipulada-angela-merkel/">
+                      <img class="round" style="width:200px" src="./images/nobbot_logo.png"></a>
+                  </a>
+                </center>
+              </td>
+
+          </tr></tbody>
+        </table>
         <br>
       <hr>
 
@@ -298,14 +329,14 @@
           <tbody><tr>
                   <td width="400px">
             <left>
-          <center><h1>Acknowledgements</h1></center>
-          This work was supported, in part, by DARPA grant FA8750-16-C-0166 and UC Berkeley Center for Long-Term Cybersecurity. 
-          We thank Hany Farid and Shruti Agarwal for their advice, assistance, and inspiration in building this project, 
-          David Fouhey and Allan Jabri for helping with the editing, and Abhinav Gupta for letting us use his GPUs. 
+          <center><h2>Acknowledgements</h2></center>
+          This work was supported, in part, by DARPA grant FA8750-16-C-0166 and UC Berkeley Center for Long-Term Cybersecurity.
+          We thank Hany Farid and Shruti Agarwal for their advice, assistance, and inspiration in building this project,
+          David Fouhey and Allan Jabri for helping with the editing, and Abhinav Gupta for letting us use his GPUs.
           Finally, we thank the many Reddit and Onion artists who unknowingly contributed to our dataset
           <br>
           <br>
-          This work was supported, in part, by DARPA grant FA8750-16-C-0166 and UC Berkeley Center for Long-Term Cybersecurity. 
+          This work was supported, in part, by DARPA grant FA8750-16-C-0166 and UC Berkeley Center for Long-Term Cybersecurity.
           <br>
           <br>
           This website template is being rented from <a href="https://richzhang.github.io/colorization/">our colorful landlords</a>.
